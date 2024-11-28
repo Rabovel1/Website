@@ -4,8 +4,8 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="4" fill="#E0E0E0" />
+      <svg width="60" height="60" viewBox="0 0 40 40" className="fill-current" xmlns="http://www.w3.org/2000/svg">
+        <rect width="60" height="60" rx="4" fill="#E0E0E0" />
         {/* Candlestick Bars */}
         <rect x="8" y="10" width="4" height="15" fill="#34D399"/>
         <rect x="18" y="7" width="4" height="21" fill="#F87171"/>
@@ -26,9 +26,9 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
+      <svg width="60" height="60" viewBox="0 0 40 40" className="fill-current">
 
-        <rect width="40" height="40" rx="4" fill="#E5E7EB"/>
+        <rect width="60" height="60" rx="4" fill="#E5E7EB"/>
         
         <rect x="10" y="20" width="4" height="12" fill="#34D399"/>
         <rect x="18" y="14" width="4" height="18" fill="#34D399"/>
@@ -46,7 +46,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current" xmlns="http://www.w3.org/2000/svg">
+      <svg width="60" height="60" viewBox="0 0 40 40" className="fill-current" xmlns="http://www.w3.org/2000/svg">
 
       <circle cx="20" cy="20" r="18" stroke="black" strokeWidth="2" fill="none"/>
 
@@ -69,7 +69,7 @@ const featuresData: Feature[] = [
     id: 1,
     icon: (
       <svg width="60" height="60" viewBox="0 0 40 40" className="fill-current" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="19" stroke="#000" stroke-width="2" fill="none" />
+        <circle cx="20" cy="20" r="19" stroke="#000" strokeWidth="2" fill="none" />
         <path d="M10 25 L15 18 L18 22 L25 12" stroke="#00C853" strokeWidth="2" fill="none" />
         <path d="M24 12 L26 18 L22 16 L28 14" stroke="#00C853" strokeWidth="2" fill="none" />
         <path d="M30 15 L25 22 L22 18 L15 28" stroke="#D32F2F" strokeWidth="2" fill="none" />
