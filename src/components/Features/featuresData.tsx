@@ -68,7 +68,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current" xmlns="http://www.w3.org/2000/svg">
+      <svg width="60" height="60" viewBox="0 0 40 40" className="fill-current" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="19" stroke="#000" stroke-width="2" fill="none" />
         <path d="M10 25 L15 18 L18 22 L25 12" stroke="#00C853" strokeWidth="2" fill="none" />
         <path d="M24 12 L26 18 L22 16 L28 14" stroke="#00C853" strokeWidth="2" fill="none" />

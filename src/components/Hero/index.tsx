@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="relative z-10 overflow-hidden pb-16 pt-[120px] dark:bg-gray-dark bg-cover bg-center bg-no-repeat md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]">
+    <div className="relative z-10 overflow-hidden pb-16 pt-[100px] dark:bg-gray-dark bg-cover bg-center bg-no-repeat md:pb-[100px] md:pt-[120px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[120px] 2xl:pt-[90px]">
       {/* Background with Overlay */}
       <div
         className="absolute inset-0 bg-black opacity-30"
@@ -44,7 +44,6 @@ const Hero = () => {
                 alt="Stock Exchange Chart"
                 width={700}
                 height={500}
-                className="rounded-lg"
               />
             </div>
           </div>
