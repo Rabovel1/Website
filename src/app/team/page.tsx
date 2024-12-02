@@ -74,7 +74,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="text-center bg-white shadow-lg p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300"
+              className="text-center  shadow-lg p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300"
             >
               <Image
                 src={member.image}

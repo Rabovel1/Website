@@ -31,7 +31,7 @@ const AboutSectionTwo = () => {
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   Discover Rabovel:  Shaping the Future of Digital Trading in Nigeria. 
                 </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="text-base font-medium leading-relaxed text-black dark:text-white sm:text-lg sm:leading-relaxed">
                   Founded with the goal of revolutionizing the trading landscape in 
                   Nigeria, Rabovel is committed to providing innovative solutions like options 
                   and futures trading. Our vision is to empower investors with cutting-edge tools 
@@ -42,7 +42,7 @@ const AboutSectionTwo = () => {
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   Empowering Your Investments 
                 </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="text-base font-medium leading-relaxed text-black dark:text-white sm:text-lg sm:leading-relaxed">
                   Rabovel is revolutionizing the Nigerian stock market with innovative 
                   trading options and futures for everyone.
                 </p>

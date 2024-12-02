@@ -5,17 +5,24 @@ import SectionTitle from "../Common/SectionTitle";
 
 const Cta = () => {
   return (
-    <div id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <div id="about" className="pt-10 md:pt-10 mx-auto lg:pt-15">
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
+            <div className="w-full px-4 lg:w-1/3">
+                <h2 className="text-4xl font-extraboldtext-black dark:text-white md:text-5xl">
+                Start Your Trading Journey Today
+                </h2>
+                <p className="mt-4 text-lg text-black dark:text-white mb-10">
+                Open an account now to explore innovative trading options and 
+                maximize your investment potential.
+                </p>
+              {/* <SectionTitle
                 title="  Start Your Trading Journey Today  "
                 paragraph="Open an account now to explore innovative trading options and 
                  maximize your investment potential."
                 mb="44px"
-              />
+              /> */}
 
               <Link
                 href="/signup"

@@ -35,10 +35,10 @@ const Stock = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-extrabold text-gray-800 dark:text-white md:text-5xl">
+          <h2 className="text-4xl font-extrabold text-black dark:text-white md:text-5xl">
             NGX Stock Market Analytics
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-lg text-black dark:text-white">
             Explore top-performing stocks on the Nigerian Exchange and stay informed.
           </p>
         </div>

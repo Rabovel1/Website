@@ -26,7 +26,7 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                <p className="mb-9 text-base leading-relaxed text-black dark:text-white">
                   Open an account now to explore innovative trading options and 
                   maximize your investment potential
                 </p>
@@ -36,7 +36,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -56,7 +56,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -78,7 +78,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -94,7 +94,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="17"
@@ -118,7 +118,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       About
                     </Link>
@@ -126,7 +126,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/team"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Meet Our Team
                     </Link>
@@ -144,7 +144,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/terms"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Terms & Conditoin
                     </Link>
@@ -152,7 +152,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/policy"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Policies
                     </Link>
@@ -170,7 +170,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Customer Care
                     </Link>
@@ -375,7 +375,7 @@ const Footer = () => {
           </svg>
         </div>
         <div className="container mt-2 mx-auto">
-          <p className="text-md bg-grey-200 justify-center">&copy; 2024 Rabovel. All rights reserved.</p>
+          <p className="text-md bg-grey-200 text-black dark:text-white justify-center">&copy; 2024 Rabovel. All rights reserved.</p>
         </div>
       </footer>
     </>
