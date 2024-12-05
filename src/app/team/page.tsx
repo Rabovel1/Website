@@ -85,7 +85,7 @@ const Team = () => {
                 <Link href={member.socialLinks.twitter} target="_blank">
                   <FontAwesomeIcon
                     icon={faXTwitter} // Replaced faTwitter with faXTwitter
-                    className="text-blue-500 hover:text-black text-xl"
+                    className="text-blue-500 hover:text-blue-600 text-xl"
                   />
                 </Link>
                 <Link href={member.socialLinks.linkedin} target="_blank">
