@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="relative z-10 overflow-hidden pb-16 pt-[100px] dark:bg-gray-dark bg-cover bg-center bg-no-repeat md:pb-[100px] md:pt-[120px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[120px] 2xl:pt-[90px]">
       {/* Background with Overlay */}
       <div
-        className="absolute inset-0 bg-black opacity-30"
+        className="absolute inset-0 bg-black opacity-50"
         style={{
           backgroundImage: `url('/images/hero/background1.jpg')`, // Replace with your actual image path
           backgroundSize: "cover",
@@ -16,11 +16,11 @@ const Hero = () => {
         }}
       ></div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-5">
         <div className="flex flex-wrap items-center justify-between">
           {/* Left Section - Text and Button */}
           <div className="w-full px-4 lg:w-1/2">
-            <div className="max-w-[500px]">
+            <div className="max-w-[550px]">
               <h1 className="mb-5 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                 Unlock Your Trading Potential with Rabovel
               </h1>
@@ -42,8 +42,8 @@ const Hero = () => {
               <Image
                 src="/images/hero/trade07.png"
                 alt="Stock Exchange Chart"
-                width={700}
-                height={500}
+                width={600}
+                height={400}
               />
             </div>
           </div>
