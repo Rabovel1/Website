@@ -7,7 +7,7 @@ const Contact = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div
-              className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className="mb-11 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
               "
             >
@@ -20,10 +20,10 @@ const Contact = () => {
               <form>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
+                    <div className="mb-6">
                       <label
                         title="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        className="mb-2 block text-sm font-medium text-dark dark:text-white"
                       >
                         Your Name
                       </label>
@@ -35,7 +35,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
+                    <div className="mb-5">
                       <label
                         title="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
@@ -50,10 +50,10 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <div className="mb-8">
+                    <div className="mb-3">
                       <label
                         title="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        className="block text-sm font-medium text-dark dark:text-white"
                       >
                         Your Message
                       </label>
