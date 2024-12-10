@@ -25,8 +25,8 @@ const Team = () => {
     },
     {
       name: "Haye Binjo Emmanuel",
-      role: "Product Manager/CO-Founder",
-      profession: "Product Manager",
+      role: "Chief Financial Officer/CO-Founder",
+      profession: "Financial Expert",
       image: "/images/team/Haye.jpeg",
       socialLinks: {
         twitter: "https://x.com/binjo_haye",
@@ -76,7 +76,7 @@ const Team = () => {
                 alt={member.name}
                 width={120}
                 height={120}
-                className="rounded-full mx-auto mb-4 animate-zoomOut"
+                className="rounded-full mx-auto mb-3 animate-zoomOut"
               />
               <h2 className="text-xl font-bold">{member.name}</h2>
               <p className="">{member.role}</p>
