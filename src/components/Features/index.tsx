@@ -10,14 +10,14 @@ const Features = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Main Features"
+          title="Products and Services"
           paragraph="Rabovel offers groundbreaking options and futures trading, 
             setting a new standard for Nigerian investors. Unlock new opportunities and diversify 
             your portfolio with our unique trading features"
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
           {featuresData.map((feature) => (
             <div
               key={feature.id}

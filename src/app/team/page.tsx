@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faInstagram,
   faFacebook,
-} from "@fortawesome/free-brands-svg-icons"; // Importing FontAwesome icons
+} from "@fortawesome/free-brands-svg-icons";
 
 const Team = () => {
   const teamMembers = [
@@ -71,20 +71,22 @@ const Team = () => {
               key={index}
               className="text-center shadow-lg p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300"
             >
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={120}
-                height={120}
-                className="rounded-full mx-auto mb-3 animate-zoomOut"
-              />
-              <h2 className="text-xl font-bold">{member.name}</h2>
+              <div className="w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-blue-700">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={144}
+                  height={144}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <h2 className="text-xl font-bold mt-4">{member.name}</h2>
               <p className="">{member.role}</p>
               <p className="text-sm mb-4">{member.profession}</p>
               <div className="flex justify-center gap-4">
                 <Link href={member.socialLinks.twitter} target="_blank">
                   <FontAwesomeIcon
-                    icon={faXTwitter} // Replaced faTwitter with faXTwitter
+                    icon={faXTwitter}
                     className="text-blue-500 hover:text-blue-600 text-xl"
                   />
                 </Link>

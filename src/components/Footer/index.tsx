@@ -374,8 +374,8 @@ const Footer = () => {
             </defs>
           </svg>
         </div>
-        <div className="container mt-2 mx-auto">
-          <p className="text-md bg-grey-200 text-black dark:text-white justify-center">&copy; 2024 Rabovel. All rights reserved.</p>
+        <div className="container mt-2 mx-auto mb-10">
+          <p className="text-md mb-20 bg-grey-200 font-semibold text-black dark:text-white justify-center">&copy; 2024 Rabovel. All rights reserved.</p>
         </div>
       </footer>
     </>
