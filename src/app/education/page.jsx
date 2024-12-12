@@ -57,7 +57,7 @@ const Education = () => {
       {/* Understanding Market Trends */}
       <section className="mb-16">
         <h2 className="text-3xl font-semibold mb-6">Understanding Market Trends in Nigerian Stocks</h2>
-        <p className="text-lg  mb-4">
+        <p className="text-lg mb-4">
           Before placing orders, understanding market trends is key to making informed decisions. Here are some tips:
         </p>
         <div className="space-y-4">
@@ -75,11 +75,33 @@ const Education = () => {
           </div>
           <div>
             <h3 className="text-xl font-medium mb-2">Monitor News and Events</h3>
-            <p className="text-lg ">
+            <p className="text-lg">
               Stay updated with local and global financial news, which can influence Nigerian stock prices and market movements.
             </p>
           </div>
         </div>
+      </section>
+
+      {/* Educational Video Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-semibold mb-6">Watch and Learn: Trading Nigerian Stocks</h2>
+        <p className="text-lg mb-4">
+          Learn through our detailed video guides. Watch the video below to understand how to effectively trade Nigerian stocks using Rabovel.
+        </p>
+        <div className="aspect-w-16 aspect-h-9 mb-6">
+          <iframe
+            src="https://www.youtube.com/embed/example-video-id"
+            title="How to Trade Nigerian Stocks"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full rounded-lg shadow-lg"
+          ></iframe>
+        </div>
+        <p className="text-lg font-medium text-blue-600">
+          <a href="https://www.youtube.com/channel/example-channel-id" target="_blank" rel="noopener noreferrer">
+            Visit our YouTube Channel for more tutorials
+          </a>
+        </p>
       </section>
 
       {/* Frequently Asked Questions */}
@@ -88,7 +110,7 @@ const Education = () => {
         <div className="space-y-4">
           <div>
             <h3 className="text-xl font-medium mb-2">How do I withdraw funds from Rabovel?</h3>
-            <p className="text-lg ">
+            <p className="text-lg">
               To withdraw funds, log in to your Rabovel account, go to the "Funds" section, and choose "Withdraw". Enter your bank details to receive the transfer.
             </p>
           </div>
