@@ -136,7 +136,7 @@ const Footer = () => {
             </div>
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
+              <div className="mb-5 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Terms
                 </h2>
@@ -182,7 +182,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+          <div className="h-px w-full mb-10 bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
           <svg
@@ -374,8 +374,8 @@ const Footer = () => {
             </defs>
           </svg>
         </div>
-        <div className="container mt-2 mx-auto mb-10">
-          <p className="text-md mb-20 bg-grey-200 font-semibold text-black dark:text-white justify-center">&copy; 2024 Rabovel. All rights reserved.</p>
+        <div className="container mx-auto">
+          <p className="text-md-3 bg-grey-200 font-semibold text-black dark:text-white justify-center">&copy; 2024 Rabovel. All rights reserved.</p>
         </div>
       </footer>
     </>
