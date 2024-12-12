@@ -30,7 +30,7 @@ const Education = () => {
       <section className="mb-16 bg-gray-50 text-gray-800 p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-semibold mb-6">Placing Stock Orders on Rabovel</h2>
         <p className="text-lg mb-4">
-          Once your account is set up, you can place stock orders. Here’s how:
+          Once your account is set up, you can place stock orders. Here is how:
         </p>
         <div className="space-y-8">
           <div>
