@@ -130,7 +130,7 @@ const Education = () => {
           If you have any questions or need assistance, feel free to reach out to our customer support team. We are here to help!
         </p>
         <p className="text-lg font-medium text-blue-600">
-          <a href="mailto:support@rabovel.com">support@rabovel.com</a>
+          <a href="/contact">support@rabovel.com</a>
         </p>
       </section>
     </div>
