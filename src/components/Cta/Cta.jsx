@@ -13,7 +13,7 @@ const Cta = () => {
           <div className="flex flex-wrap items-center -mx-4">
             {/* Left Section - Text and CTA */}
             <div className="w-full px-4 mt-12 lg:mt-0 lg:w-1/2">
-              <div className="relative mx-auto max-w-lg overflow-hidden rounded-lg shadow-lg transition-transform duration-500 ease-in-out group hover:scale-105">
+              <div className="relative mx-auto max-w-lg overflow-hidden transition-transform duration-500 ease-in-out group hover:scale-105">
                 <Image
                   src="/images/about/about-1.png"
                   alt="Trading Image"

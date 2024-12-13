@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="relative z-10 overflow-hidden bg-cover bg-center bg-no-repeat pb-16 pt-[100px] dark:bg-gray-500 md:pb-[100px] md:pt-[120px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[120px] 2xl:pt-[90px]">
       {/* Background with Overlay */}
       <div
-        className="absolute inset-0 bg-black opacity-35"
+        className="absolute inset-0 bg-black opacity-50"
         style={{
           backgroundImage: `url('/images/hero/background1.jpg')`,
           backgroundSize: "cover",
@@ -45,7 +45,6 @@ const Hero = () => {
                 alt="Stock Exchange Chart"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-lg"
               />
             </div>
           </div>
