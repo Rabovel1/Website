@@ -111,7 +111,7 @@ const Education = () => {
           <div>
             <h3 className="text-xl font-medium mb-2">How do I withdraw funds from Rabovel?</h3>
             <p className="text-lg">
-              To withdraw funds, log in to your Rabovel account, go to the "Funds" section, and choose "Withdraw". Enter your bank details to receive the transfer.
+              To withdraw funds, log in to your Rabovel account, go to the Funds section, and choose Withdraw. Enter your bank details to receive the transfer.
             </p>
           </div>
           <div>
