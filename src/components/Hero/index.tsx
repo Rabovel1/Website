@@ -25,7 +25,7 @@ const Hero = () => {
               <h1 className="mb-6 text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
                 Unlock Your Trading Potential with Rabovel
               </h1>
-              <p className="mb-8 text-lg font-extrabold leading-tight sm:text-xl">
+              <p className="mb-8 text-lg font-inter font-extrabold leading-tight sm:text-xl">
                 Experience a new era of trading in Nigeria with Rabovel. Join us today to explore innovative features like options and futures trading that elevate your investment strategy.
               </p>
               <Link

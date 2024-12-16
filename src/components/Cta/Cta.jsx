@@ -28,7 +28,7 @@ const Cta = () => {
               <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl md:text-5xl leading-tight">
                 Start Your Trading Journey Today
               </h2>
-              <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 sm:text-xl leading-relaxed">
+              <p className="mt-6 text-lg text-gray-700 font-inter dark:text-gray-300 sm:text-xl leading-relaxed">
                 Open an account now to explore innovative trading options and 
                 maximize your investment potential.
               </p>
