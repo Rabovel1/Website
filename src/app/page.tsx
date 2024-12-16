@@ -12,7 +12,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Rabovel",
-  description: "This is the website for the Rabovelt Startup",
+  description: "This is the website for the Rabovel Startup",
   // other metadata
 };
 

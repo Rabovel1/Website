@@ -10,7 +10,7 @@ const PolicyPage = () => {
     <div className="container my-10 mx-auto px-4 py-10 lg:py-20">
       {/* Header Section */}
       <header className="text-center mb-12">
-        <h1 className="text-3xl font-bold mb-4">Our Policies</h1>
+        <h1 className="text-3xl font-bold mb-4  text-primary">Our Policies</h1>
         <p className="text-lg">
           Learn about how we manage your data, our terms of use, and refund procedures.
         </p>

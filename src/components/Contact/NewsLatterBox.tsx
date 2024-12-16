@@ -28,10 +28,10 @@ const NewsLatterBox = () => {
         <input
           type="submit"
           value="Subscribe"
-          className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-sm  bg-gradient-to-r from-blue-500 to-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl dark:from-blue-600 dark:to-indigo-700"
+          className="mb-6 mt-2 flex w-full cursor-pointer items-center justify-center rounded-sm  bg-gradient-to-r from-blue-500 to-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl dark:from-blue-600 dark:to-indigo-700"
         />
         <p className="text-center text-base leading-relaxed text-black dark:text-white">
-          No spam guaranteed, So please don’t send any spam mail.
+          No spam guaranteed, So please don&rsquo;t send any spam mail.
         </p>
       </div>
 

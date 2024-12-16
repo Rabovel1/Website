@@ -38,7 +38,7 @@ const Contact = () => {
                     <div className="mb-5">
                       <label
                         title="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        className="mb-2 block text-sm font-medium text-dark dark:text-white"
                       >
                         Your Email
                       </label>
@@ -53,7 +53,7 @@ const Contact = () => {
                     <div className="mb-3">
                       <label
                         title="message"
-                        className="block text-sm font-medium text-dark dark:text-white"
+                        className=" mb-2 block text-sm font-medium text-dark dark:text-white"
                       >
                         Your Message
                       </label>
@@ -66,7 +66,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="inline-block rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl dark:from-blue-600 dark:to-indigo-700">
+                    <button className="inline-block rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-10 py-4 text-lg font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl dark:from-blue-600 dark:to-indigo-700">
                       Send
                     </button>
                   </div>

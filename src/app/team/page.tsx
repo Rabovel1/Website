@@ -25,7 +25,7 @@ const Team = () => {
     },
     {
       name: "Haye Binjo Emmanuel",
-      role: "Chief Financial Officer/CO-Founder",
+      role: "Chief Financial Officer/Co-Founder",
       profession: "Financial Expert",
       image: "/images/team/Haye.jpeg",
       socialLinks: {
@@ -71,7 +71,7 @@ const Team = () => {
               key={index}
               className="text-center shadow-lg p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-blue-700">
+              <div className="w-36 h-36 mx-auto rounded-full overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}

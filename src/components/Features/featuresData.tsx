@@ -21,9 +21,9 @@ const featuresData: Feature[] = [
         </svg>
       </div>
     ),
-    title: "Futures and Options Trading",
+    title: "Futures Trading",
     paragraph:
-      "Experience a new level of investment flexibility and higher returns with Nigeria's first Futures & Options trading platform.",
+      "Unlock greater flexibility and higher returns trading futures.",
   },
   {
     id: 2,
@@ -115,7 +115,7 @@ const featuresData: Feature[] = [
       </div>
     ),
     title: "Education",
-    paragraph: "Learn the essentials of trading with our expert-led courses and tutorials.",
+    paragraph: "Learn trading essentials with our expert-led tutorials.",
   },
   {
     id: 6,

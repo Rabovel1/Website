@@ -12,7 +12,7 @@ const FAQPage = () => {
     {
       question: "What is Rabovel?",
       answer:
-        "Rabovel is a Nigerian stockbroker platform offering features trading, options, and tools to maximize investment potential in the local stock market.",
+        "Rabovel is a Nigerian stockbroker platform offering stocks trading, derivative (futures) trading and tools to maximize investment potential in the local stock market.",
     },
     {
       question: "How do I create an account?",
@@ -21,7 +21,7 @@ const FAQPage = () => {
     },
     {
       question: "What is the minimum deposit amount?",
-      answer: "The minimum deposit amount is $50 to begin trading on the platform.",
+      answer: "The minimum deposit amount is $10 to begin trading on the platform.",
     },
     {
       question: "How secure is my data on Rabovel?",
