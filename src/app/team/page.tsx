@@ -49,7 +49,7 @@ const Team = () => {
     },
     {
       name: "Tsoji Victor Rikwen",
-      role: "Chief Operation Officer",
+      role: "Chief Operations Officer",
       profession: "Software Developer",
       image: "/images/team/Tsoji.jpg",
       socialLinks: {
