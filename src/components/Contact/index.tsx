@@ -24,7 +24,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData);
+    // TODO: Implement form submission logic
   };
 
   const containerVariants = {
