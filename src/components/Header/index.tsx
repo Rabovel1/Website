@@ -3,183 +3,256 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ChevronDown } from "lucide-react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
-  // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarToggleHandler = () => {
-    setNavbarOpen(!navbarOpen);
-  };
-
-  // Sticky Navbar
   const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
+  const pathname = usePathname();
+
   useEffect(() => {
+    const handleStickyNavbar = () => {
+      setSticky(window.scrollY >= 80);
+    };
+
     window.addEventListener("scroll", handleStickyNavbar);
-  });
-
-  // submenu handler`
-  const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(-1);
-    } else {
-      setOpenIndex(index);
-    }
-  };
-
-  const usePathName = usePathname();
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
+  }, []);
 
   return (
-    <>
-      <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
-          sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "absolute bg-transparent"
-        }`}
-        >
-        <div className="container items-center justify-between">
-          <div className="relative mx-auto flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
-              >
-                <Image
-                  src="/images/logo/Rabovel.png "
-                  alt="logo"
-                  width={100}
-                  height={10}
-                  className="w-full dark:hidden"
-                />
-                <Image
-                  src="/images/logo/Rabovel.png"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
-              </Link>
-            </div>
-            <div className="flex w-full items-center justify-between px-4">
-              <div>
-                <button
-                  onClick={navbarToggleHandler}
-                  id="navbarToggler"
-                  aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
-                >
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[7px] rotate-45" : " "
-                    }`}
-                  />
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? "opacity-0 " : " "
-                    }`}
-                  />
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[-8px] -rotate-45" : " "
-                    }`}
-                  />
-                </button>
-                <nav
-                  id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
-                    navbarOpen
-                      ? "visibility top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
-                  }`}
-                >
-                  <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map((menuItem, index) => (
-                      <li key={index} className="group relative">
-                        {menuItem.path ? (
-                          <Link
-                            href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-                              usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-                            }`}
-                          >
-                            {menuItem.title}
-                          </Link>
-                        ) : (
-                          <>
-                            <p
-                              onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
-                            >
-                              {menuItem.title}
-                              <span className="pl-3">
-                                <svg width="25" height="24" viewBox="0 0 25 24">
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M6.29289 8.8427C6.68342 8.45217 7.31658 8.45217 7.70711 8.8427L12 13.1356L16.2929 8.8427C16.6834 8.45217 17.3166 8.45217 17.7071 8.8427C18.0976 9.23322 18.0976 9.86639 17.7071 10.2569L12 15.964L6.29289 10.2569C5.90237 9.86639 5.90237 9.23322 6.29289 8.8427Z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </span>
-                            </p>
-                            <div
-                              className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
-                                openIndex === index ? "block" : "hidden"
-                              }`}
-                            >
-                              {menuItem.submenu.map((submenuItem, index) => (
-                                <Link
-                                  href={submenuItem.path}
-                                  key={index}
-                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
-                                >
-                                  {submenuItem.title}
-                                </Link>
-                              ))}
-                            </div>
-                          </>
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={cn(
+        "header left-0 top-0 z-40 flex w-full items-center transition-all duration-300",
+        sticky
+          ? "fixed z-[9999] bg-background/80 backdrop-blur-md shadow-lg"
+          : "absolute bg-transparent"
+      )}
+    >
+      <div className="container">
+        <div className="relative mx-auto flex items-center justify-between">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="w-60 max-w-full px-4 xl:mr-12"
+          >
+            <Link
+              href="/"
+              className={cn(
+                "header-logo block w-full transition-all duration-300",
+                sticky ? "py-5 lg:py-2" : "py-8"
+              )}
+            >
+              <Image
+                src="/images/logo/Rabovel.png"
+                alt="logo"
+                width={140}
+                height={30}
+                className="w-full transition-opacity duration-300 dark:hidden"
+              />
+              <Image
+                src="/images/logo/Rabovel.png"
+                alt="logo"
+                width={140}
+                height={30}
+                className="hidden w-full transition-opacity duration-300 dark:block"
+              />
+            </Link>
+          </motion.div>
+
+          <div className="flex w-full items-center justify-between px-4">
+            {/* Mobile Menu Button */}
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setNavbarOpen(!navbarOpen)}
+              className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg p-2 ring-primary focus:ring-2 lg:hidden"
+              aria-label="Toggle menu"
+            >
+              {navbarOpen ? (
+                <X className="h-6 w-6 text-foreground" />
+              ) : (
+                <Menu className="h-6 w-6 text-foreground" />
+              )}
+            </motion.button>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:block">
+              <ul className="flex items-center space-x-8">
+                {menuData.map((menuItem, index) => (
+                  <motion.li
+                    key={menuItem.id || index}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="group relative"
+                  >
+                    {menuItem.path ? (
+                      <Link
+                        href={menuItem.path}
+                        className={cn(
+                          "relative py-6 text-base font-medium transition-colors duration-200",
+                          pathname === menuItem.path
+                            ? "text-primary"
+                            : "text-foreground/70 hover:text-primary"
                         )}
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
-              </div>
-            </div>
+                      >
+                        {menuItem.title}
+                        {pathname === menuItem.path && (
+                          <motion.div
+                            layoutId="activeTab"
+                            className="absolute bottom-4 left-0 right-0 h-0.5 bg-primary"
+                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                          />
+                        )}
+                      </Link>
+                    ) : menuItem.submenu ? (
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <button className="flex items-center gap-1 py-6 text-base font-medium text-foreground/70 transition-colors duration-200 hover:text-primary">
+                            {menuItem.title}
+                            <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                          </button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent
+                          align="start"
+                          className="w-48"
+                        >
+                          {menuItem.submenu.map((subItem) => (
+                            <DropdownMenuItem key={subItem.id} asChild>
+                              <Link
+                                href={subItem.path}
+                                className="cursor-pointer"
+                              >
+                                {subItem.title}
+                              </Link>
+                            </DropdownMenuItem>
+                          ))}
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    ) : null}
+                  </motion.li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Desktop Auth Buttons */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="hidden items-center gap-4 md:flex"
+            >
+              <Button
+                variant="ghost"
+                asChild
+                className="hidden md:flex"
+              >
+                <Link href="/signin">Sign In</Link>
+              </Button>
+              <Button
+                variant="gradient"
+                size="lg"
+                asChild
+                className="hidden md:flex"
+              >
+                <Link href="/signup">Sign Up</Link>
+              </Button>
+              <ThemeToggler />
+            </motion.div>
           </div>
         </div>
-      </header>
-    </>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {navbarOpen && (
+            <motion.nav
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden lg:hidden"
+            >
+              <motion.ul
+                initial={{ y: -20 }}
+                animate={{ y: 0 }}
+                exit={{ y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-2 border-t border-border bg-background p-4"
+              >
+                {menuData.map((menuItem, index) => (
+                  <motion.li
+                    key={menuItem.id || index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                  >
+                    {menuItem.path ? (
+                      <Link
+                        href={menuItem.path}
+                        onClick={() => setNavbarOpen(false)}
+                        className={cn(
+                          "block rounded-lg px-4 py-3 text-base font-medium transition-colors duration-200",
+                          pathname === menuItem.path
+                            ? "bg-primary/10 text-primary"
+                            : "text-foreground/70 hover:bg-accent hover:text-primary"
+                        )}
+                      >
+                        {menuItem.title}
+                      </Link>
+                    ) : menuItem.submenu ? (
+                      <div className="space-y-1">
+                        <div className="rounded-lg px-4 py-3 text-base font-medium text-foreground/70">
+                          {menuItem.title}
+                        </div>
+                        <ul className="ml-4 space-y-1 border-l border-border pl-4">
+                          {menuItem.submenu.map((subItem) => (
+                            <li key={subItem.id}>
+                              <Link
+                                href={subItem.path}
+                                onClick={() => setNavbarOpen(false)}
+                                className="block rounded-lg px-4 py-2 text-sm text-foreground/70 transition-colors duration-200 hover:bg-accent hover:text-primary"
+                              >
+                                {subItem.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </motion.li>
+                ))}
+                <li className="flex flex-col gap-2 pt-4">
+                  <Button variant="ghost" asChild className="w-full justify-start">
+                    <Link href="/signin" onClick={() => setNavbarOpen(false)}>
+                      Sign In
+                    </Link>
+                  </Button>
+                  <Button variant="gradient" asChild className="w-full">
+                    <Link href="/signup" onClick={() => setNavbarOpen(false)}>
+                      Sign Up
+                    </Link>
+                  </Button>
+                </li>
+              </motion.ul>
+            </motion.nav>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.header>
   );
 };
 

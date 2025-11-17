@@ -1,19 +1,15 @@
 import AboutSectionOne from "@/components/About/AboutSection";
-import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
-//import Testimonials from "@/components/Testimonials";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Cta from "@/components/Cta/Cta"
+import Cta from "@/components/Cta/Cta";
 import Stocks from "@/components/Stocks";
-//import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rabovel",
-  description: "This is the website for the Rabovel Startup",
-  // other metadata
+  title: "Rabovel - Modern Trading Platform",
+  description: "Experience a new era of trading in Nigeria with Rabovel. Join us today to explore innovative features like options and futures trading that elevate your investment strategy.",
 };
 
 export default function Home() {
@@ -22,11 +18,8 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      {/* <Testimonials /> */}
-      <Stocks/>
-      <Brands />      
-      {/* <Video /> */}
-      <Cta/>
+      <Stocks />
+      <Cta />
       <AboutSectionOne />
       <Contact />
     </>
