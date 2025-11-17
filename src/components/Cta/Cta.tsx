@@ -237,7 +237,7 @@ const Cta = () => {
               className="text-lg leading-relaxed text-muted-foreground sm:text-xl"
             >
               Open an account now to explore innovative trading options and
-              maximize your investment potential with Rabovel's cutting-edge
+              maximize your investment potential with Rabovel&apos;s cutting-edge
               platform designed for modern traders.
             </motion.p>
 

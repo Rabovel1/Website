@@ -41,7 +41,7 @@ const Brands = () => {
             Trusted by Leading Platforms
           </h2>
           <p className="text-muted-foreground">
-            We're proud to be recognized by industry leaders
+            We&apos;re proud to be recognized by industry leaders
           </p>
         </motion.div>
         <div className="-mx-4 flex flex-wrap">
