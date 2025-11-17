@@ -1,13 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faXTwitter,
-  faLinkedin,
-  faInstagram,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Twitter, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Team = () => {
   const teamMembers = [
@@ -21,18 +18,6 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/kimie-maskala-18892317b",
         instagram: "https://instagram.com",
         facebook: "https://www.facebook.com/kimie.alexandermaskala",
-      },
-    },
-    {
-      name: "Haye Binjo Emmanuel",
-      role: "Chief Financial Officer/Co-Founder",
-      profession: "Financial Expert",
-      image: "/images/team/Haye.jpeg",
-      socialLinks: {
-        twitter: "https://x.com/binjo_haye",
-        linkedin: "https://www.linkedin.com/in/haye-binjo-a956901b3",
-        instagram: "https://instagram.com/emilydavis",
-        facebook: "https://facebook.com/emilydavis",
       },
     },
     {
@@ -61,57 +46,155 @@ const Team = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, -0.05, 0.01, 0.99] as const,
+      },
+    },
+  };
+
   return (
-    <section id="about" className="pt-16 mb-5 md:pt-20 lg:pt-28">
-      <div className="container mx-auto px-4">
-        <h1 className="text-center mt-10 text-4xl font-bold mb-8">Our Team</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background via-muted/30 to-background pt-16 pb-16 md:pt-20 lg:pt-28">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute right-0 top-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.3, 0.2],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+
+      <div className="container relative z-10 mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
+          <h1 className="mb-4 text-4xl font-extrabold text-foreground md:text-5xl">
+            Meet Our Team
+          </h1>
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            The talented individuals behind Rabovel, dedicated to revolutionizing
+            trading in Nigeria.
+          </p>
+        </motion.div>
+
+        {/* Team Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="text-center shadow-lg p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300"
-            >
-              <div className="w-36 h-36 mx-auto rounded-full overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={144}
-                  height={144}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <h2 className="text-xl font-bold mt-4">{member.name}</h2>
-              <p className="">{member.role}</p>
-              <p className="text-sm mb-4">{member.profession}</p>
-              <div className="flex justify-center gap-4">
-                <Link href={member.socialLinks.twitter} target="_blank">
-                  <FontAwesomeIcon
-                    icon={faXTwitter}
-                    className="text-blue-500 hover:text-blue-600 text-xl"
-                  />
-                </Link>
-                <Link href={member.socialLinks.linkedin} target="_blank">
-                  <FontAwesomeIcon
-                    icon={faLinkedin}
-                    className="text-blue-600 hover:text-blue-800 text-xl"
-                  />
-                </Link>
-                <Link href={member.socialLinks.instagram} target="_blank">
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    className="text-red-500 hover:text-pink-700 text-xl"
-                  />
-                </Link>
-                <Link href={member.socialLinks.facebook} target="_blank">
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    className="text-blue-800 hover:text-blue-900 text-xl"
-                  />
-                </Link>
-              </div>
-            </div>
+            <motion.div key={index} variants={itemVariants}>
+              <Card className="group h-full border-2 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:shadow-xl hover:shadow-primary/10">
+                <CardContent className="p-6 text-center">
+                  {/* Avatar */}
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="mb-6 flex justify-center"
+                  >
+                    <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-primary/20 bg-gradient-to-br from-primary/10 to-primary/5 transition-all duration-300 group-hover:border-primary/40">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    </div>
+                  </motion.div>
+
+                  {/* Info */}
+                  <h2 className="mb-1 text-xl font-bold text-foreground">
+                    {member.name}
+                  </h2>
+                  <p className="mb-2 text-sm font-semibold text-primary">
+                    {member.role}
+                  </p>
+                  <p className="mb-6 text-sm text-muted-foreground">
+                    {member.profession}
+                  </p>
+
+                  {/* Social Links */}
+                  <div className="flex justify-center gap-3">
+                    <motion.a
+                      href={member.socialLinks.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                      aria-label="Twitter"
+                    >
+                      <Twitter className="h-5 w-5" />
+                    </motion.a>
+                    <motion.a
+                      href={member.socialLinks.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </motion.a>
+                    <motion.a
+                      href={member.socialLinks.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="h-5 w-5" />
+                    </motion.a>
+                    <motion.a
+                      href={member.socialLinks.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="h-5 w-5" />
+                    </motion.a>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -21,7 +21,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
 
-      <body className={`bg-[#F0F8FF] dark:bg-black ${ubuntu.className}`}>
+      <body className={`bg-background text-foreground ${ubuntu.className}`}>
         <Providers>
           <Header />
           {children}

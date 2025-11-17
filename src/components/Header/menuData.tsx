@@ -14,7 +14,7 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
-    id: 2,
+    id: 3,
     title: "Contact",
     path: "/contact",
     newTab: false,
@@ -24,36 +24,24 @@ const menuData: Menu[] = [
     title: "More",
     newTab: false,
     submenu: [
+      // {
+      //   id: 5,
+      //   title: "Education",
+      //   path: "/",
+      //   newTab: false,
+      // },
       {
-        id: 6,
-        title: "Education",
-        path: "/",
-        newTab: false,
-      },
-      {
-        id: 3,
+        id: 7,
         title: "FAQ",
         path: "/faq",
         newTab: false,
       },
       {
-        id: 4,
-        title: "Term & Condition",
-        path: "/terms",
-        newTab: false,
-      },
-      {
-        id: 5,
+        id: 8,
         title: "Policies",
         path: "/policy",
         newTab: false,
       },
-      {
-        id: 6,
-        title: "Our Team",
-        path: "/team",
-        newTab: false,
-      }
     ],
   },
 ];
