@@ -25,7 +25,7 @@ const Cta = () => {
       y: 0,
       transition: {
         duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
+        ease: [0.6, -0.05, 0.01, 0.99] as const,
       },
     },
   };
@@ -38,7 +38,7 @@ const Cta = () => {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: [0.6, -0.05, 0.01, 0.99],
+        ease: [0.6, -0.05, 0.01, 0.99] as const,
       },
     },
   };
@@ -237,7 +237,7 @@ const Cta = () => {
               className="text-lg leading-relaxed text-muted-foreground sm:text-xl"
             >
               Open an account now to explore innovative trading options and
-              maximize your investment potential with Rabovel's cutting-edge
+              maximize your investment potential with Rabovel&apos;s cutting-edge
               platform designed for modern traders.
             </motion.p>
 

@@ -85,7 +85,7 @@ const Footer = () => {
               </Link>
               <p className="mb-6 text-base leading-relaxed text-muted-foreground">
                 Open an account now to explore innovative trading options and
-                maximize your investment potential with Rabovel's cutting-edge
+                maximize your investment potential with Rabovel&apos;s cutting-edge
                 fintech platform.
               </p>
               <div className="flex items-center gap-4">
